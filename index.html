@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Space - Escuela de Conducción</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: #f5f5f5;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #e60000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact {
+      background: #f9f9f9;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #e60000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header>
+  <img src="logo.png" alt="Auto Space">
+  <nav>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#instalaciones">Instalaciones</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Aprende a conducir en Bogotá</h1>
+  <p>Formación segura, profesional y certificada</p>
+  <a class="btn" href="#contacto">Contactar</a>
+</section>
+
+<!-- NOSOTROS -->
+<section class="section" id="nosotros">
+  <h2>Quiénes somos</h2>
+  <p>
+    En Auto Space somos un centro de enseñanza automovilística comprometido con la formación responsable de conductores. 
+    Contamos con instructores certificados y vehículos modernos, garantizando un aprendizaje seguro y de calidad.
+  </p>
+</section>
+
+<!-- CURSOS -->
+<section class="section" id="cursos">
+  <h2>Cursos y licencias</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>A2 - Moto</h3>
+      <p>25h teoría<br>3h taller<br>15h prácticas</p>
+      <p id="precioA2"></p>
+    </div>
+
+    <div class="card">
+      <h3>B1 - Carro</h3>
+      <p>25h teoría<br>5h taller<br>20h prácticas</p>
+      <p id="precioB1"></p>
+    </div>
+
+    <div class="card">
+      <h3>C1 - Público</h3>
+      <p>30h teoría<br>5h taller<br>30h prácticas</p>
+      <p id="precioC1"></p>
+    </div>
+
+    <div class="card">
+      <h3>RC1</h3>
+      <p>Recategorización</p>
+      <p id="precioRC1"></p>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin-top:20px;">
+    *Precios sujetos a cambios
+  </p>
+</section>
+
+<!-- INSTALACIONES -->
+<section class="section" id="instalaciones">
+  <h2>Instalaciones</h2>
+  <p style="text-align:center;">
+    Contamos con aulas modernas, zonas de estudio y vehículos equipados para un aprendizaje completo.
+  </p>
+</section>
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <h2>Contacto</h2>
+
+  <div class="contact">
+    <p><strong>Dirección:</strong> Cl 14 Sur #18a - 53, Barrio Restrepo</p>
+    <p><strong>Teléfono:</strong> 322 303 6630</p>
+    <p><strong>Horario:</strong> Lunes a sábado 7:30 am - 7:00 pm</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Auto Space - Todos los derechos reservados
+</footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/573223036630" target="_blank">💬</a>
+
+<!-- SCRIPT PRECIOS EDITABLES -->
+<script>
+  const precios = {
+    A2: "$900.000",
+    B1: "$1.115.000",
+    C1: "$1.130.000",
+    RC1: "$1.050.000"
+  };
+
+  document.getElementById("precioA2").innerText = precios.A2;
+  document.getElementById("precioB1").innerText = precios.B1;
+  document.getElementById("precioC1").innerText = precios.C1;
+  document.getElementById("precioRC1").innerText = precios.RC1;
+</script>
+
+</body>
+</html>
